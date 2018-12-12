@@ -1,0 +1,110 @@
+img {
+    max-width:100%;
+}
+.wrapper {
+    padding:100px;
+    margin:0 auto;
+}
+.header {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-image: linear-gradient(to right bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f7f4ff, #f3e8fd, #f1dbf9, #f5bce8, #fd99c9, #ff749e, #fd5068);
+}
+.header-content {
+    width: 100%;
+    max-width:350px;
+    margin:0 auto;
+    &__logo {}
+    &__title {
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: normal;
+        color:#fd5068;
+    }
+    &__subtitle {
+        font-family: 'Noto Serif SC', serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+.intro {
+    max-width:50%;
+    margin:0 auto 50px;
+    text-align: center;
+    &__title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 40px;
+        text-align: center;
+    }
+}
+.choice {
+    display: flex;
+    justify-content:center;
+    margin:50px 0;
+}
+.btn {
+    border-radius:3px;
+    padding:10px 15px;
+    border-width:2px;
+    border-style:solid;
+    margin:0 10px;
+    cursor:pointer;
+    @include transition;
+    &--neutral {
+        border-color:lightgray;
+        &:hover {
+            background:lightgray;
+        }
+    }
+    &--male {
+        background:lighten(skyblue, 10%);
+        border-color:skyblue;
+        &:hover {
+            background:skyblue;
+        }
+    }
+    &--female {
+        background:lighten(crimson, 10%);
+        border-color:crimson;
+        color:#fff;
+        &:hover {
+            background:crimson;
+        }
+    }
+}
+.robots {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.robot {
+    width: 100%;
+    max-width:250px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    text-align: center;
+    &__name {
+        font-size: 20px;
+        font-weight: normal;
+    }
+    &__description {
+        width: 70%;
+        margin:10px auto 20px;
+    }
+    &__portrait {
+        border-radius:0 25px 0 0;
+    }
+}
+.male .robot__portrait {
+    background-image: linear-gradient(to bottom, #89faff, #aff9ff, #d6f8ff, #f2faff, #ffffff);
+}
+.female .robot__portrait {
+    background-image: linear-gradient(to bottom, #ff89c6, #f7abe3, #f1caf6, #f2e6fe, #ffffff);
+}
